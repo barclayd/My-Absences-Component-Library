@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="14px" viewBox="0 0 9 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon</title>
+    <defs>
+        <path d="M6.07782373,6.9292543 L1.1433335,2.3743168 C0.905347168,2.15463711 0.905347168,1.79848086 1.1433335,1.57882461 L1.71886279,1.0475668 C1.95644287,0.828262114 2.3414917,0.827840239 2.57963037,1.0466293 L6.50872803,4.65649649 L10.4378003,1.0466293 C10.675939,0.827840239 11.0609878,0.828262114 11.2985679,1.0475668 L11.8740972,1.57882461 C12.1120835,1.7985043 12.1120835,2.15466055 11.8740972,2.3743168 L6.93963232,6.9292543 C6.701646,7.14891055 6.31581006,7.14891055 6.07782373,6.9292543 Z" id="path-1"></path>
+    </defs>
+    <g id="My-Absences" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Update-absence-start" transform="translate(-983.000000, -458.000000)">
+            <g id="List-item" transform="translate(110.000000, 429.000000)">
+                <g id="Icon" transform="translate(877.500000, 36.000000) rotate(-90.000000) translate(-877.500000, -36.000000) translate(871.000000, 32.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#2E384D" fill-rule="nonzero" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
