@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyledProgressCircle } from './StyledProgressCirlce';
+import { StyledCircle } from '../../atoms/Circle/StyledCircle';
+import { StyledArcStart, StyledArcEnd } from './StyledProgressCirlce';
 
 export interface ProgressCircleProps {
   /**
@@ -40,14 +41,16 @@ export const ProgressCircle: React.FC<ProgressCircleProps> = ({
   fontSize,
 }) => {
   return (
-    <StyledProgressCircle
+    <StyledCircle
       background={background}
       fontWeight={fontWeight}
       color={color}
       size={size}
       fontSize={fontSize}
     >
+      <StyledArcStart background={background} />
+      <StyledArcEnd background={background} />
       {text}
-    </StyledProgressCircle>
+    </StyledCircle>
   );
 };
