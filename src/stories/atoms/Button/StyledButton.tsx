@@ -1,7 +1,7 @@
 import { StyledTheme } from '../../../models/theme';
 import styled from 'styled-components';
 
-export const ButtonContainer = styled.div`
+export const StyledButton = styled.div`
   background: ${({ theme }: StyledTheme) => theme.primary.background};
   width: auto;
   max-width: 65px;

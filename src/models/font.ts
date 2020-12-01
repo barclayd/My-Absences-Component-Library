@@ -2,13 +2,14 @@ export enum FontSize {
   'extra-small' = '12px',
   'small' = '14px',
   'medium' = '16px',
-  'large' = '18px',
-  'subheading' = '24px',
+  'subheading' = '18px',
+  'heading' = '28px',
   'title' = '42px',
 }
 
 export enum FontTypeface {
   standard = 'ArialMT',
+  calibri = 'Calibri',
 }
 
 export enum FontWeight {
@@ -22,4 +23,5 @@ export interface Font {
   family: string;
   size: FontSize;
   weight: FontWeight;
+  secondaryFamily: string;
 }
