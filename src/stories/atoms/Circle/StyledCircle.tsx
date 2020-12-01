@@ -19,13 +19,13 @@ export const StyledCircle = styled.div<StyledCircleProps>`
   border-radius: 50%;
   font-family: ${({ theme }: StyledCircleProps) => theme.font.family};
   background: ${({ background, theme }: StyledCircleProps) =>
-    background ?? theme.primary.background};
+    background ?? theme.primary.colour};
   width: ${({ size }: StyledCircleProps) => size ?? '30px'};
   height: ${({ size }: StyledCircleProps) => size ?? '30px'};
   font-size: ${({ fontSize }: StyledCircleProps) =>
     fontSize ?? FontSize.subheading};
   color: ${({ color, theme }: StyledCircleProps) =>
-    color ?? theme.primary.colour};
+    color ?? theme.primary.background};
   font-weight: ${({ fontWeight, theme }: StyledCircleProps) =>
     fontWeight ?? theme.font.weight};
 `;

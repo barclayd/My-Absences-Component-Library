@@ -18,11 +18,11 @@ export const StyledArc = styled.div`
 
 export const StyledArcStart = styled(StyledArc)<StyledProgressCircleProps>`
   border-color: ${({ background, theme }: StyledProgressCircleProps) =>
-      background ?? theme.primary.background}
+      background ?? theme.primary.colour}
     ${({ background, theme }: StyledProgressCircleProps) =>
-      background ?? theme.primary.background}
+      background ?? theme.primary.colour}
     ${({ background, theme }: StyledProgressCircleProps) =>
-      background ?? theme.primary.background}
+      background ?? theme.primary.colour}
     transparent;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -33,9 +33,9 @@ export const StyledArcStart = styled(StyledArc)<StyledProgressCircleProps>`
 
 export const StyledArcEnd = styled(StyledArc)<StyledProgressCircleProps>`
   border-color: ${({ background, theme }: StyledProgressCircleProps) =>
-      background ?? theme.primary.background}
+      background ?? theme.primary.colour}
     ${({ background, theme }: StyledProgressCircleProps) =>
-      background ?? theme.primary.background}
+      background ?? theme.primary.colour}
     transparent transparent;
   -webkit-transform: rotate(75deg);
   -moz-transform: rotate(75deg);

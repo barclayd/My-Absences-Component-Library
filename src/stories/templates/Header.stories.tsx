@@ -13,4 +13,7 @@ export default {
 const Template: Story<HeaderProps> = (args) => <Header {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+  initials: 'EM',
+  name: 'Elon Musk',
+};
