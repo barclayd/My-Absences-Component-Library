@@ -12,6 +12,7 @@ export interface Theme {
   };
   font: Font;
   placeholder: string;
+  icon: string;
 }
 
 export interface StyledTheme {

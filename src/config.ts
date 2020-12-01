@@ -25,6 +25,7 @@ export const lightTheme: Theme = {
   },
   placeholder: '#354052',
   font: defaultFont,
+  icon: '#2E384D',
 };
 
 export const darkTheme: Theme = {
@@ -39,6 +40,7 @@ export const darkTheme: Theme = {
   },
   placeholder: '#354052',
   font: defaultFont,
+  icon: '#ffffff',
 };
 
 export enum AppTheme {
