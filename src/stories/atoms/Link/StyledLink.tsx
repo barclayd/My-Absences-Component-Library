@@ -12,6 +12,7 @@ export const StyledLink = styled.a<StyledLinkProps>`
   font-size: ${({ fontSize }: StyledLinkProps) => fontSize ?? FontSize.medium};
   color: ${({ color, theme }: StyledLinkProps) =>
     color ?? theme.primary.colour};
-  font-family: ${({ theme }: StyledLinkProps) => theme.font.family};
+  font-family: ${({ theme }: StyledLinkProps) => theme.font.secondaryFamily};
   text-decoration: underline;
+  letter-spacing: -0.26px;
 `;

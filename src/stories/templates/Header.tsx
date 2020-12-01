@@ -10,6 +10,7 @@ import {
 import { Icon, RegisteredIcon } from '../atoms/Icon/Icon';
 import { Heading, HeadingStyle } from '../atoms/Header/Heading';
 import { Link } from '../atoms/Link/Link';
+import { ProgressCircle } from '../molecules/ProgressCircle/ProgresCircle';
 
 export interface HeaderProps {
   /**
@@ -21,7 +22,15 @@ export interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ background }) => (
   <StyledContainer background={background}>
     <StyledUser>
-      <StyledCircle>circle</StyledCircle>
+      <StyledCircle>
+        <ProgressCircle
+          size="58px"
+          text="SL"
+          background="#ffffff"
+          color="#523065"
+          fontSize="25px"
+        />
+      </StyledCircle>
       <StyledName>
         <Heading style={HeadingStyle.heading} text="Welcome Sam" />
       </StyledName>

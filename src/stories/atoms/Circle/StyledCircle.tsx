@@ -13,6 +13,7 @@ interface StyledCircleProps {
 
 export const StyledCircle = styled.div<StyledCircleProps>`
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   border-radius: 50%;

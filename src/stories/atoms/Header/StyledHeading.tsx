@@ -11,6 +11,7 @@ const headingStyles = `
   font-weight: ${FontWeight.bold};
   margin: 0;
   padding: 0;
+  letter-spacing: -0.45px;
   `;
 
 export const StyledTitle = styled.h1<HeadingProps>`

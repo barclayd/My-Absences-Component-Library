@@ -7,6 +7,7 @@ export const font = (
 ): Font => ({
   typeface: FontTypeface.standard,
   family: FontTypeface.standard,
+  secondaryFamily: FontTypeface.calibri,
   weight,
   size,
 });

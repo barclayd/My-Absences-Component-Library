@@ -27,6 +27,7 @@ export const StyledUser = styled.div`
   justify-self: flex-start;
   align-self: flex-start;
   grid-template-columns: 1fr 3fr;
+  grid-gap: 10px;
   grid-template-areas:
     'circle name'
     'circle action';

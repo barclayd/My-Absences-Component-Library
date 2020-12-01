@@ -8,10 +8,10 @@ interface StyledProgressCircleProps {
 
 export const StyledArc = styled.div`
   position: absolute;
-  top: 11px;
-  left: 11px;
-  width: 56px;
-  height: 56px;
+  top: -5px;
+  left: -5px;
+  width: 64px;
+  height: 64px;
   border-radius: 100%;
   border: 2px solid;
 `;

@@ -14,8 +14,8 @@ const Template: Story<ProgressCircleProps> = (args) => (
 export const Primary = Template.bind({});
 Primary.args = {
   background: 'pink',
-  fontSize: '18px',
+  fontSize: '25px',
   text: 'DB',
-  size: '50px',
+  size: '57px',
   color: 'white',
 };

@@ -9,6 +9,7 @@ export enum FontSize {
 
 export enum FontTypeface {
   standard = 'ArialMT',
+  calibri = 'Calibri',
 }
 
 export enum FontWeight {
@@ -22,4 +23,5 @@ export interface Font {
   family: string;
   size: FontSize;
   weight: FontWeight;
+  secondaryFamily: string;
 }
