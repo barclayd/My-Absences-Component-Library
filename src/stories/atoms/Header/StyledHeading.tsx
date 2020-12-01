@@ -9,25 +9,27 @@ export interface HeadingProps {
 
 const headingStyles = `
   font-weight: ${FontWeight.bold};
+  margin: 0;
+  padding: 0;
   `;
 
 export const StyledTitle = styled.h1<HeadingProps>`
-  background: ${FontSize.title};
-  color: ${(props: HeadingProps) => props.color ?? props.theme.icon};
+  font-size: ${FontSize.title};
+  color: ${(props: HeadingProps) => props.color ?? props.theme.primary.colour};
   font-family: ${(props: HeadingProps) => props.theme.font.family};
   ${headingStyles}
 `;
 
 export const StyledHeading = styled.h2<HeadingProps>`
-  background: ${FontSize.heading};
-  color: ${(props: HeadingProps) => props.color ?? props.theme.icon};
+  font-size: ${FontSize.heading};
+  color: ${(props: HeadingProps) => props.color ?? props.theme.primary.colour};
   font-family: ${(props: HeadingProps) => props.theme.font.family};
   ${headingStyles}
 `;
 
 export const StyledSubHeading = styled.h3<HeadingProps>`
-  background: ${FontSize.subheading};
-  color: ${(props: HeadingProps) => props.color ?? props.theme.icon};
+  font-size: ${FontSize.subheading};
+  color: ${(props: HeadingProps) => props.color ?? props.theme.primary.colour};
   font-family: ${(props: HeadingProps) => props.theme.font.family};
   ${headingStyles}
 `;

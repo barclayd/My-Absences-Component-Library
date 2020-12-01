@@ -1,10 +1,15 @@
 import React from 'react';
 import {
-  StyledHeaderContainer,
-  StyledHeaderLogoContainer,
-  StyledHeaderUserContainer,
+  StyledAction,
+  StyledCircle,
+  StyledContainer,
+  StyledLogo,
+  StyledName,
+  StyledUser,
 } from './StyledHeader';
 import { Icon, RegisteredIcon } from '../atoms/Icon/Icon';
+import { Heading, HeadingStyle } from '../atoms/Header/Heading';
+import { Link } from '../atoms/Link/Link';
 
 export interface HeaderProps {
   /**
@@ -14,10 +19,18 @@ export interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ background }) => (
-  <StyledHeaderContainer background={background}>
-    <StyledHeaderUserContainer>Hello</StyledHeaderUserContainer>
-    <StyledHeaderLogoContainer>
+  <StyledContainer background={background}>
+    <StyledUser>
+      <StyledCircle>circle</StyledCircle>
+      <StyledName>
+        <Heading style={HeadingStyle.heading} text="Welcome Sam" />
+      </StyledName>
+      <StyledAction>
+        <Link text="Sign out" />
+      </StyledAction>
+    </StyledUser>
+    <StyledLogo>
       <Icon iconName={RegisteredIcon.logo} color="#ffffff" iconSize="82px" />
-    </StyledHeaderLogoContainer>
-  </StyledHeaderContainer>
+    </StyledLogo>
+  </StyledContainer>
 );
