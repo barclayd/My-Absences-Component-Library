@@ -2,8 +2,8 @@ export enum FontSize {
   'extra-small' = '12px',
   'small' = '14px',
   'medium' = '16px',
-  'large' = '18px',
-  'subheading' = '24px',
+  'subheading' = '18px',
+  'heading' = '24px',
   'title' = '42px',
 }
 
