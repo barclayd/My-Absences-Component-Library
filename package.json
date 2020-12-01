@@ -4,6 +4,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "lint": "eslint '*/**/*.{js,ts}' --fix",
+    "prettier": "prettier --loglevel warn --write '**/*.{js,json,md,mdx,ts}'",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -29,13 +31,13 @@
     "@storybook/addon-links": "^6.1.9",
     "@storybook/node-logger": "^6.1.9",
     "@storybook/preset-create-react-app": "^3.1.5",
-    "@storybook/react": "^6.1.9"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "@storybook/react": "^6.1.9",
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "@typescript-eslint/parser": "^4.9.0",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.2.1"
   },
   "browserslist": {
     "production": [
