@@ -11,6 +11,7 @@ export interface Theme {
     colour: string;
   };
   font: Font;
+  placeholder: string;
 }
 
 export interface StyledTheme {

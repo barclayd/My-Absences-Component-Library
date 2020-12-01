@@ -6,7 +6,7 @@ export const font = (
   weight: FontWeight = FontWeight.standard,
 ): Font => ({
   typeface: FontTypeface.standard,
-  family: `${FontTypeface.standard}; sans-serif`,
+  family: FontTypeface.standard,
   weight,
   size,
 });
@@ -23,6 +23,7 @@ export const lightTheme: Theme = {
     background: '#383739',
     colour: '#ffffff',
   },
+  placeholder: '#354052',
   font: defaultFont,
 };
 
@@ -36,6 +37,7 @@ export const darkTheme: Theme = {
     background: '#fafafa',
     colour: '#003366',
   },
+  placeholder: '#354052',
   font: defaultFont,
 };
 

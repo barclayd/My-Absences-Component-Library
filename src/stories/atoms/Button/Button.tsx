@@ -1,6 +1,5 @@
 import React from 'react';
 import { ButtonContainer } from './StyledButton';
-import './button.css';
 
 export interface ButtonProps {
   /**
@@ -16,6 +15,6 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button: React.FC<ButtonProps> = ({ label }) => {
-  return <ButtonContainer>{label}</ButtonContainer>;
+export const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
+  return <ButtonContainer onClick={onClick}>{label}</ButtonContainer>;
 };
