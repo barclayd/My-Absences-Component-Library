@@ -30,5 +30,6 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/class-name-casing': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
   },
 };
