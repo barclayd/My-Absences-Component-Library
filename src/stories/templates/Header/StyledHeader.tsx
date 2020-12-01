@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Theme } from '../../models/theme';
+import { Theme } from '../../../models/theme';
 
 export interface HeaderProps {
   background?: string;

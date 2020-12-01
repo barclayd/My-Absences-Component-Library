@@ -7,10 +7,10 @@ import {
   StyledName,
   StyledUser,
 } from './StyledHeader';
-import { Icon, RegisteredIcon } from '../atoms/Icon/Icon';
-import { Heading, HeadingStyle } from '../atoms/Header/Heading';
-import { Link } from '../atoms/Link/Link';
-import { ProgressCircle } from '../molecules/ProgressCircle/ProgresCircle';
+import { Icon, RegisteredIcon } from '../../atoms/Icon/Icon';
+import { Heading, HeadingStyle } from '../../atoms/Header/Heading';
+import { Link } from '../../atoms/Link/Link';
+import { ProgressCircle } from '../../molecules/ProgressCircle/ProgresCircle';
 
 export interface HeaderProps {
   /**
