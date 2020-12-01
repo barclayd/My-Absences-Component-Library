@@ -15,4 +15,9 @@ const Template: Story<IconProps> = (args) => <Icon {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   iconName: RegisteredIcon.arrow,
+  iconSize: '22px',
+};
+export const LargeSize = Template.bind({});
+LargeSize.args = {
+  iconSize: '60px',
 };

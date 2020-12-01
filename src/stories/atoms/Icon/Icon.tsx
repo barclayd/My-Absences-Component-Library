@@ -4,12 +4,14 @@ import approved from '../../assets/approved.svg';
 import check from '../../assets/check.svg';
 import sandtimer from '../../assets/sandtimer.svg';
 import arrow from '../../assets/arrow.svg';
+import logo from '../../assets/logo.svg';
 
 export enum RegisteredIcon {
   approved = 'approved',
   arrow = 'arrow',
   check = 'check',
   sandtimer = 'sandtimer',
+  logo = 'logo',
 }
 
 export interface IconProps {
@@ -20,11 +22,12 @@ export interface IconProps {
     | RegisteredIcon.arrow
     | RegisteredIcon.sandtimer
     | RegisteredIcon.check
-    | RegisteredIcon.approved;
+    | RegisteredIcon.approved
+    | RegisteredIcon.logo;
   /**
    * Icon size
    */
-  size?: string;
+  iconSize?: string;
   /**
    * Optional onChange handler
    */
@@ -40,10 +43,23 @@ const iconMap = new Map<RegisteredIcon, string>([
   [RegisteredIcon.check, check],
   [RegisteredIcon.sandtimer, sandtimer],
   [RegisteredIcon.arrow, arrow],
+  [RegisteredIcon.logo, logo],
 ]);
 
-export const Icon: React.FC<IconProps> = ({ color, iconName, onClick }) => {
+export const Icon: React.FC<IconProps> = ({
+  color,
+  iconName,
+  iconSize,
+  onClick,
+}) => {
   const icon = iconMap.get(iconName) ?? approved;
 
-  return <StyledIcon color={color} src={icon} onClick={onClick} />;
+  return (
+    <StyledIcon
+      iconSize={iconSize}
+      color={color}
+      src={icon}
+      onClick={onClick}
+    />
+  );
 };
