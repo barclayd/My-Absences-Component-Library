@@ -1,16 +1,16 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { HeadingStyle, Header, HeaderProps } from './Header';
+import { HeadingStyle, Heading, HeadingProps } from './Heading';
 
 export default {
-  title: 'Atoms/Header',
-  component: Header,
+  title: 'Atoms/Heading',
+  component: Heading,
   argTypes: {
     color: { control: 'color' },
   },
 } as Meta;
 
-const Template: Story<HeaderProps> = (args) => <Header {...args} />;
+const Template: Story<HeadingProps> = (args) => <Heading {...args} />;
 
 export const Title = Template.bind({});
 Title.args = {
@@ -18,8 +18,8 @@ Title.args = {
   style: HeadingStyle.title,
 };
 
-export const Heading = Template.bind({});
-Heading.args = {
+export const NormalHeading = Template.bind({});
+NormalHeading.args = {
   text: 'Some text',
   style: HeadingStyle.heading,
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledHeading, StyledSubHeading, StyledTitle } from './StyledHeader';
+import { StyledHeading, StyledSubHeading, StyledTitle } from './StyledHeading';
 import { StyledComponent } from 'styled-components';
 
 export enum HeadingStyle {
@@ -8,7 +8,7 @@ export enum HeadingStyle {
   subheading = 'subheaing',
 }
 
-export interface HeaderProps {
+export interface HeadingProps {
   /**
    * Heading style
    */
@@ -29,7 +29,7 @@ const componentMap = new Map<HeadingStyle, StyledComponent<any, any>>([
   [HeadingStyle.subheading, StyledSubHeading],
 ]);
 
-export const Header: React.FC<HeaderProps> = ({ color, text, style }) => {
+export const Heading: React.FC<HeadingProps> = ({ color, text, style }) => {
   const Component = componentMap.get(style) ?? StyledTitle;
   return <Component color={color}>{text}</Component>;
 };
