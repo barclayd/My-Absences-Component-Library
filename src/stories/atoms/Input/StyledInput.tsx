@@ -4,7 +4,7 @@ import { StyledTheme } from '../../../models/theme';
 export const StyledInput = styled.input`
   font-size: ${({ theme }: StyledTheme) => theme.font.size};
   font-family: ${({ theme }: StyledTheme) => theme.font.family};
-  width: 400px;
+  width: 80%;
   height: 44px;
   box-sizing: border-box;
   padding: 7px 16px;

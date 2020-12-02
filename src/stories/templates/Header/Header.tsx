@@ -36,7 +36,7 @@ const initialsFromName = (name: string): string => {
     return '';
   }
   const nameArray = name.split(' ').slice(0, 2);
-  return nameArray.map((name) => name[0].toUpperCase()).join('');
+  return nameArray.map((name) => name[0]?.toUpperCase()).join('');
 };
 
 export const Header: React.FC<HeaderProps> = ({

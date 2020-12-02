@@ -18,7 +18,7 @@ export const FooterContainer = styled.div`
     background ?? theme.secondary.background};
   grid-template-columns: 2fr 2fr 2fr 3fr;
   grid-template-areas:
-    'location . . email'
+    'location location . email'
     'top-line top-line top-line top-line'
     '. icon icon .'
     'bottom-line bottom-line bottom-line bottom-line'
