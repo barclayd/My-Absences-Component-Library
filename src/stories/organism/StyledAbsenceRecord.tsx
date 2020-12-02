@@ -15,7 +15,7 @@ export const StyledContainer = styled.div`
   grid-template-rows: auto;
   align-items: center;
   justify-items: flex-start;
-  padding: 15px;
+  padding: 5px 15px;
 `;
 
 export const DateCircleContainer = styled.div`
