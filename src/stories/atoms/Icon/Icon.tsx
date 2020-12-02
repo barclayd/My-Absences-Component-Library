@@ -62,7 +62,7 @@ export const Icon: React.FC<IconProps> = ({
         setIcon(logo);
       }
     })(iconName);
-  });
+  }, [iconName]);
 
   return (
     <StyledIcon
