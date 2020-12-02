@@ -13,4 +13,5 @@ export const StyledText = styled.div<StyledTextProps>`
   color: ${({ color, theme }: StyledTextProps) =>
     color ?? theme.primary.colour};
   font-family: ${(props: StyledTextProps) => props.theme.font.family};
+  line-height: 21px;
 `;

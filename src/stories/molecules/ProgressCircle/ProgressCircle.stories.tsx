@@ -15,6 +15,7 @@ export const Primary = Template.bind({});
 Primary.args = {
   background: 'pink',
   fontSize: '25px',
+  fontWeight: 600,
   text: 'DB',
   size: '57px',
   color: 'white',

@@ -7,10 +7,10 @@ import {
   StyledName,
   StyledUser,
 } from './StyledHeader';
-import { Icon, RegisteredIcon } from '../atoms/Icon/Icon';
-import { Heading, HeadingStyle } from '../atoms/Header/Heading';
-import { Link } from '../atoms/Link/Link';
-import { ProgressCircle } from '../molecules/ProgressCircle/ProgresCircle';
+import { Icon, RegisteredIcon } from '../../atoms/Icon/Icon';
+import { Heading, HeadingStyle } from '../../atoms/Header/Heading';
+import { Link } from '../../atoms/Link/Link';
+import { ProgressCircle } from '../../molecules/ProgressCircle/ProgresCircle';
 
 export interface HeaderProps {
   /**
@@ -22,10 +22,6 @@ export interface HeaderProps {
    */
   initialsColour?: string;
   /**
-   * Initials for <ProgressCircle /> in header
-   */
-  initials: string;
-  /**
    * Background colour for <ProgressCircle /> in header
    */
   circleBackground?: string;
@@ -35,14 +31,22 @@ export interface HeaderProps {
   name: string;
 }
 
+const initialsFromName = (name: string): string => {
+  if (!name) {
+    return '';
+  }
+  const nameArray = name.split(' ').slice(0, 2);
+  return nameArray.map((name) => name[0].toUpperCase()).join('');
+};
+
 export const Header: React.FC<HeaderProps> = ({
   background,
   initialsColour,
   circleBackground,
-  initials,
   name,
 }) => {
   const headingText = `Welcome ${name}`;
+  const initials = initialsFromName(name);
   return (
     <StyledContainer background={background}>
       <StyledUser>
@@ -51,6 +55,7 @@ export const Header: React.FC<HeaderProps> = ({
             size="58px"
             text={initials}
             background={circleBackground}
+            fontWeight={600}
             color={initialsColour}
             fontSize="25px"
           />

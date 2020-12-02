@@ -6,6 +6,7 @@ export const StyledInput = styled.input`
   font-family: ${({ theme }: StyledTheme) => theme.font.family};
   width: 400px;
   height: 44px;
+  box-sizing: border-box;
   padding: 7px 16px;
   border-radius: 2px;
   border: 1px solid #e9e9e9;
