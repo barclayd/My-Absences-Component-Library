@@ -1,5 +1,5 @@
-import React from 'react';
-import { SelectionOption, StyledSelection } from './StyledSelection';
+import React, { useState } from 'react';
+import { StyledLabel, StyledSelection } from './StyledSelection';
 
 export interface SelectionProps {
   /**
@@ -24,14 +24,27 @@ export const Selection: React.FC<SelectionProps> = ({
   activeOption,
   onClick,
 }) => {
-  const active = activeOption ?? options[0];
+  const handleClick = (option: string) => {
+    setRadio(option);
+    onClick(option);
+  };
+
+  const [activeRadio, setRadio] = useState(activeOption ?? options[0]);
+
   const selectionOptions = options.map((option) => (
-    <SelectionOption
-      isActive={option === active}
-      onClick={() => onClick(option)}
-    >
-      {option}
-    </SelectionOption>
+    <StyledLabel isActive={option === activeRadio}>
+      <input
+        type="radio"
+        name={option}
+        id={option}
+        onClick={() => handleClick(option)}
+      />
+      <span>{option}</span>
+    </StyledLabel>
   ));
-  return <StyledSelection>{selectionOptions}</StyledSelection>;
+  return (
+    <form>
+      <StyledSelection>{selectionOptions}</StyledSelection>
+    </form>
+  );
 };
