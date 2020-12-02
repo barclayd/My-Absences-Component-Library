@@ -1,9 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyledIcon } from './StyledIcon';
-import approved from '../../assets/approved.svg';
-import check from '../../assets/check.svg';
-import sandtimer from '../../assets/sandtimer.svg';
-import arrow from '../../assets/arrow.svg';
 import logo from '../../assets/logo.svg';
 
 export enum RegisteredIcon {
@@ -12,18 +8,23 @@ export enum RegisteredIcon {
   check = 'check',
   sandtimer = 'sandtimer',
   logo = 'logo',
+  pinterest = 'pinterest',
+  facebook = 'facebook',
+  github = 'github',
+  instagram = 'instagram',
+  linkedin = 'linkedin',
+  medium = 'medium',
+  reddit = 'reddit',
+  twitter = 'twitter',
+  vimeo = 'vimeo',
+  youtube = 'youtube',
 }
 
 export interface IconProps {
   /**
    * Placeholder text when input length is 0
    */
-  iconName:
-    | RegisteredIcon.arrow
-    | RegisteredIcon.sandtimer
-    | RegisteredIcon.check
-    | RegisteredIcon.approved
-    | RegisteredIcon.logo;
+  iconName: RegisteredIcon;
   /**
    * Icon size
    */
@@ -38,21 +39,23 @@ export interface IconProps {
   color?: string;
 }
 
-const iconMap = new Map<RegisteredIcon, string>([
-  [RegisteredIcon.approved, approved],
-  [RegisteredIcon.check, check],
-  [RegisteredIcon.sandtimer, sandtimer],
-  [RegisteredIcon.arrow, arrow],
-  [RegisteredIcon.logo, logo],
-]);
-
 export const Icon: React.FC<IconProps> = ({
   color,
   iconName,
   iconSize,
   onClick,
 }) => {
-  const icon = iconMap.get(iconName) ?? approved;
+  const [icon, setIcon] = useState(logo);
+
+  useEffect(() => {
+    (async function dynamicImport(iconName: string) {
+      if (!iconName) {
+        return;
+      }
+      const icon = await import(`../../assets/${iconName}.svg`);
+      setIcon(icon.default);
+    })(iconName);
+  });
 
   return (
     <StyledIcon
