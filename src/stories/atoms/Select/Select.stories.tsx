@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { Select, SelectProps } from './Select';
-import { AbsenceStatus } from '../../organism/AbsenceRecord';
+import { AbsenceStatus } from '../../organism/AbsenceRecord/AbsenceRecord';
 
 export default {
   title: 'Atoms/Select',

@@ -2,7 +2,10 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { AbsenceList, AbsenceListProps } from './AbsenceList';
 import styled from 'styled-components';
-import { Absence, AbsenceStatus } from '../../organism/AbsenceRecord';
+import {
+  Absence,
+  AbsenceStatus,
+} from '../../organism/AbsenceRecord/AbsenceRecord';
 
 export default {
   title: 'Templates/Absence List',

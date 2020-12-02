@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { StyledText } from '../atoms/Text/StyledText';
-import { StyledTheme } from '../../models/theme';
+import { StyledText } from '../../atoms/Text/StyledText';
+import { StyledTheme } from '../../../models/theme';
 
 export const StyledContainer = styled.div`
   display: grid;

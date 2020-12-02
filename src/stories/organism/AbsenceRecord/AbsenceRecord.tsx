@@ -9,11 +9,11 @@ import {
   Status,
   StyledContainer,
 } from './StyledAbsenceRecord';
-import { DateCircle } from '../molecules/DateCircle/DateCircle';
-import { Icon, RegisteredIcon } from '../atoms/Icon/Icon';
-import { dayMap, monthMap } from '../../helpers';
-import { Heading, HeadingStyle } from '../atoms/Header/Heading';
-import { Text } from '../atoms/Text/Text';
+import { DateCircle } from '../../molecules/DateCircle/DateCircle';
+import { Icon, RegisteredIcon } from '../../atoms/Icon/Icon';
+import { dayMap, monthMap } from '../../../helpers';
+import { Heading, HeadingStyle } from '../../atoms/Header/Heading';
+import { Text } from '../../atoms/Text/Text';
 
 export enum AbsenceStatus {
   pending = 'pending',
