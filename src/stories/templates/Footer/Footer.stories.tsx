@@ -44,4 +44,9 @@ Primary.args = {
     RegisteredIcon.linkedin,
     RegisteredIcon.reddit,
   ],
+  emailButtonText: 'Sign up',
+  emailHeader: 'Lorem Ipsum',
+  emailText:
+    'Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodal. Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodal.',
+  emailInputPlaceholder: 'Sign up for emails',
 };

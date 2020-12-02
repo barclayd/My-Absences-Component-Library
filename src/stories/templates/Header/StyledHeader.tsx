@@ -33,6 +33,9 @@ export const StyledUser = styled.div`
     'circle action';
   width: auto;
   height: 33%;
+  & > * {
+    margin: 0 5px;
+  }
 `;
 
 export const StyledLogo = styled.div`

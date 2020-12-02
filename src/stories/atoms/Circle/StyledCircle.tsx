@@ -4,7 +4,7 @@ import { FontSize } from '../../../models/font';
 
 interface StyledCircleProps {
   background?: string;
-  fontWeight?: string;
+  fontWeight?: string | number;
   color?: string;
   size?: string;
   fontSize?: string;

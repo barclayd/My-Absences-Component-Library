@@ -14,7 +14,7 @@ export interface ProgressCircleProps {
   /**
    * Font weight for text in circle
    */
-  fontWeight?: string;
+  fontWeight?: string | number;
   /**
    * Colour for text in circle
    */

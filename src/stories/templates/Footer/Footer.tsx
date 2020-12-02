@@ -22,12 +22,40 @@ export interface FooterProps {
    */
   locations: string[];
   /**
-   * Background colour for <ProgressCircle /> in header
+   * Icons for footer
    */
   icons: RegisteredIcon[];
+  /**
+   * Copyright text for footer
+   */
+  copyright: string;
+  /**
+   * Header for email in footer
+   */
+  emailHeader: string;
+  /**
+   * Text for email in footer
+   */
+  emailText: string;
+  /**
+   * Email placeholder input for email in footer
+   */
+  emailInputPlaceholder: string;
+  /**
+   * Email button text for email in footer
+   */
+  emailButtonText: string;
 }
 
-export const Footer: React.FC<FooterProps> = ({ locations, icons }) => {
+export const Footer: React.FC<FooterProps> = ({
+  locations,
+  icons,
+  copyright = '© All rights reserved, 2020',
+  emailHeader,
+  emailText,
+  emailInputPlaceholder,
+  emailButtonText,
+}) => {
   const locationElements = locations.map((location) => (
     <Location>{location}</Location>
   ));
@@ -40,18 +68,18 @@ export const Footer: React.FC<FooterProps> = ({ locations, icons }) => {
     <FooterContainer>
       <LocationContainer>{locationElements}</LocationContainer>
       <EmailContainer>
-        <Heading style={HeadingStyle.subheading} text="Lorem Ipsum" />
-        <Text text="Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodal. Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodal." />
+        <Heading style={HeadingStyle.subheading} text={emailHeader} />
+        <Text text={emailText} />
         <EmailSignUp>
-          <Input placeholder="Placeholder text" />
-          <Button label="Sign Up" />
+          <Input placeholder={emailInputPlaceholder} />
+          <Button label={emailButtonText} />
         </EmailSignUp>
       </EmailContainer>
       <TopLine />
       <Icons>{iconElememtns}</Icons>
       <BottomLine />
       <Copyright>
-        <Text text="© All rights reserved, 2020" />
+        <Text text={copyright} />
       </Copyright>
     </FooterContainer>
   );
