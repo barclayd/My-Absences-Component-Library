@@ -21,7 +21,7 @@ export enum AbsenceStatus {
   taken = 'taken',
 }
 
-export interface AbsenceRecordProps {
+export interface Absence {
   /**
    * Date for start of absence
    */
@@ -54,11 +54,18 @@ const formatApprovalDate = (approvalDate: string): string => {
   return `${weekday} ${dayInMonth} ${monthAbbreviation}`;
 };
 
+const formatDateElement = (dateElement: number): string => {
+  if (dateElement >= 10) {
+    return dateElement.toString();
+  }
+  return `0${dateElement}`;
+};
+
 const formatDateForTextString = (date: Date): string => {
   const day = date.getDate();
   const month = date.getMonth();
   const year = date.getFullYear();
-  return `${day}.${month}.${year}`;
+  return `${formatDateElement(day)}.${formatDateElement(month)}.${year}`;
 };
 
 const dateSummary = (
@@ -88,7 +95,7 @@ const iconMap = new Map<AbsenceStatus, RegisteredIcon>([
   [AbsenceStatus.pending, RegisteredIcon.sandtimer],
 ]);
 
-export const AbsenceRecord: React.FC<AbsenceRecordProps> = ({
+export const AbsenceRecord: React.FC<Absence> = ({
   startDate,
   endDate,
   approvalDate,
@@ -122,7 +129,7 @@ export const AbsenceRecord: React.FC<AbsenceRecordProps> = ({
       </DateContainer>
       <Line />
       <Status>
-        <Icon iconName={icon} iconSize="22px" color="#6C6C6C" />
+        <Icon iconName={icon} iconSize="30px" color="#6C6C6C" />
         <DateText fontSize="11px" color="#616161">
           {status}
         </DateText>

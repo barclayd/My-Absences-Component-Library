@@ -10,7 +10,7 @@ export const StyledContainer = styled.div`
   background: #ffffff;
   box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.5);
   border-radius: 5px;
-  grid-template-columns: 75px 3fr 2fr 2fr 1.5fr 1px 1.5fr 0.5fr;
+  grid-template-columns: 75px 3fr 2fr 2fr 1.5fr 1px 1.25fr 0.5fr;
   grid-template-areas: 'date-circle record . . date line status icon';
   grid-template-rows: auto;
   align-items: center;
@@ -28,6 +28,9 @@ export const RecordContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  & > * {
+    margin: 3.5px;
+  }
 `;
 
 export const DateContainer = styled.div`
@@ -48,10 +51,13 @@ export const Status = styled.div`
   grid-area: status;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin-left: 20px;
-  width: 45%;
+  width: 100%;
+  & > *:not(:first-child) {
+    margin-left: 10px;
+  }
 `;
 
 export const IconContainer = styled.div`

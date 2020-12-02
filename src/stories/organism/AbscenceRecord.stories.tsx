@@ -1,10 +1,6 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import {
-  AbsenceRecord,
-  AbsenceRecordProps,
-  AbsenceStatus,
-} from './AbsenceRecord';
+import { AbsenceRecord, Absence, AbsenceStatus } from './AbsenceRecord';
 import styled from 'styled-components';
 
 export default {
@@ -18,7 +14,7 @@ const Background = styled.div`
   background: #eeeeee;
 `;
 
-const Template: Story<AbsenceRecordProps> = (args) => (
+const Template: Story<Absence> = (args) => (
   <Background>
     <AbsenceRecord {...args} />
   </Background>
