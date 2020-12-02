@@ -14,6 +14,21 @@ const Template: Story<FooterProps> = (args) => <Footer {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  initials: 'EM',
-  name: 'Elon Musk',
+  locations: [
+    'Amsterdam',
+    'Amsterdam',
+    'Amsterdam',
+    'Dongguan',
+    'Dongguan',
+    'Dongguan',
+    'Hudson',
+    'Hudson',
+    'Hudson',
+    'Lincoln',
+    'Lincoln',
+    'Lincoln',
+    'Milwaukee',
+    'Milwaukee',
+    'Milwaukee',
+  ],
 };

@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 import { Theme } from '../../../models/theme';
+import { FontSize, FontTypeface } from '../../../models/font';
 
 interface FooterProps {
   background?: string;
   theme: Theme;
 }
+
+const MARGIN = '60px';
 
 export const FooterContainer = styled.div`
   display: grid;
@@ -13,9 +16,9 @@ export const FooterContainer = styled.div`
   min-height: 407px;
   background: ${({ background, theme }: FooterProps) =>
     background ?? theme.secondary.background};
-  grid-template-columns: 3fr 2fr 2fr 3fr;
+  grid-template-columns: 2fr 2fr 2fr 3fr;
   grid-template-areas:
-    'location location email email'
+    'location . . email'
     'top-line top-line top-line top-line'
     '. icon icon .'
     'bottom-line bottom-line bottom-line bottom-line'
@@ -26,13 +29,37 @@ export const FooterContainer = styled.div`
   padding: 41px 0;
 `;
 
-export const Location = styled.div`
+export const LocationContainer = styled.div`
   grid-area: location;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  width: 75%;
+  height: 70%;
+  align-items: center;
+  justify-items: flex-start;
+  margin-left: ${MARGIN};
 `;
 
-export const Email = styled.div`
+export const Location = styled.div`
+  color: #ffffff;
+  font-size: ${FontSize.medium};
+  text-align: left;
+  font-family: ${FontTypeface.standard};
+`;
+
+export const EmailContainer = styled.div`
   grid-area: email;
+  height: 80%;
+  width: 75%;
+  margin-right: ${MARGIN};
+`;
+
+export const EmailSignUp = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
 `;
 
 export const Icons = styled.div`
