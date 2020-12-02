@@ -18,6 +18,9 @@ export enum RegisteredIcon {
   twitter = 'twitter',
   vimeo = 'vimeo',
   youtube = 'youtube',
+  home = 'home',
+  logout = 'logout',
+  user = 'user',
 }
 
 export interface IconProps {
@@ -52,10 +55,14 @@ export const Icon: React.FC<IconProps> = ({
       if (!iconName) {
         return;
       }
-      const icon = await import(`../../assets/${iconName}.svg`);
-      setIcon(icon.default);
+      try {
+        const icon = await import(`../../assets/${iconName}.svg`);
+        setIcon(icon.default);
+      } catch (e) {
+        setIcon(logo);
+      }
     })(iconName);
-  });
+  }, [iconName]);
 
   return (
     <StyledIcon
