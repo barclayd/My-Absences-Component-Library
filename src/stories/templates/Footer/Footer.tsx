@@ -14,20 +14,9 @@ import { Input } from '../../atoms/Input/Input';
 import { Button } from '../../atoms/Button/Button';
 import { Heading, HeadingStyle } from '../../atoms/Header/Heading';
 import { Text } from '../../atoms/Text/Text';
+import { Icon, RegisteredIcon } from '../../atoms/Icon/Icon';
 
 export interface FooterProps {
-  /**
-   * Optional colour for background of header
-   */
-  background?: string;
-  /**
-   * Optional colour for initials in <ProgressCircle /> in header
-   */
-  initialsColour?: string;
-  /**
-   * Initials for <ProgressCircle /> in header
-   */
-  initials: string;
   /**
    * Array of location names for footer
    */
@@ -35,16 +24,16 @@ export interface FooterProps {
   /**
    * Background colour for <ProgressCircle /> in header
    */
-  circleBackground?: string;
-  /**
-   * Name for user in header
-   */
-  name: string;
+  icons: RegisteredIcon[];
 }
 
-export const Footer: React.FC<FooterProps> = ({ locations }) => {
+export const Footer: React.FC<FooterProps> = ({ locations, icons }) => {
   const locationElements = locations.map((location) => (
     <Location>{location}</Location>
+  ));
+
+  const iconElememtns = icons.map((icon) => (
+    <Icon iconName={icon} color="#ffffff" iconSize="24px" />
   ));
 
   return (
@@ -59,9 +48,11 @@ export const Footer: React.FC<FooterProps> = ({ locations }) => {
         </EmailSignUp>
       </EmailContainer>
       <TopLine />
-      <Icons>Hello!</Icons>
+      <Icons>{iconElememtns}</Icons>
       <BottomLine />
-      <Copyright>Copyright</Copyright>
+      <Copyright>
+        <Text text="© All rights reserved, 2020" />
+      </Copyright>
     </FooterContainer>
   );
 };

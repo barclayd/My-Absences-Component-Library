@@ -23,10 +23,10 @@ export const FooterContainer = styled.div`
     '. icon icon .'
     'bottom-line bottom-line bottom-line bottom-line'
     'copyright copyright copyright copyright';
-  grid-template-rows: 3fr 1px 1.5fr 1px 0.5fr;
+  grid-template-rows: 3fr 1px 1fr 1px 0.5fr;
   align-items: center;
   justify-items: center;
-  padding: 41px 0;
+  padding: 20px 0;
 `;
 
 export const LocationContainer = styled.div`
@@ -64,7 +64,12 @@ export const EmailSignUp = styled.div`
 
 export const Icons = styled.div`
   grid-area: icon;
-  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > * {
+    margin: 0 17px;
+  }
 `;
 
 export const Line = styled.div`
@@ -84,5 +89,6 @@ export const BottomLine = styled(Line)`
 export const Copyright = styled.div`
   grid-area: copyright;
   justify-self: flex-start;
-  align-items: center;
+  align-self: flex-end;
+  margin-left: ${MARGIN};
 `;
