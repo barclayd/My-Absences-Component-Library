@@ -27,15 +27,11 @@ export const StyledUser = styled.div`
   justify-self: flex-start;
   align-self: flex-start;
   grid-template-columns: 1fr 3fr;
-  grid-gap: 10px;
   grid-template-areas:
     'circle name'
     'circle action';
   width: auto;
   height: 33%;
-  & > * {
-    margin: 0 5px;
-  }
 `;
 
 export const StyledLogo = styled.div`
@@ -47,6 +43,7 @@ export const StyledLogo = styled.div`
 
 export const StyledCircle = styled.div`
   grid-area: circle;
+  justify-self: center;
 `;
 
 export const StyledName = styled.div`
