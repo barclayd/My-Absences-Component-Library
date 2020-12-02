@@ -15,16 +15,26 @@ export interface NavBarProps {
    * Min height for <NavBar />
    */
   minHeight?: string;
+  /**
+   * Min height for <NavBar />
+   */
+  onIconClick: (icon: string) => void;
 }
 
 export const NavBar: React.FC<NavBarProps> = ({
   icons,
   activeIcon,
   minHeight,
+  onIconClick = () => {},
 }) => {
   const navbarIcons = icons.map((icon) => (
     <NavIconBackground isActive={activeIcon === icon}>
-      <Icon iconName={icon} color="#000000" iconSize="20px" />
+      <Icon
+        onClick={() => onIconClick(icon)}
+        iconName={icon}
+        color="#000000"
+        iconSize="20px"
+      />
     </NavIconBackground>
   ));
 

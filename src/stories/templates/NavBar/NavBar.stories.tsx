@@ -26,4 +26,7 @@ Primary.args = {
   icons: [RegisteredIcon.home, RegisteredIcon.user, RegisteredIcon.logout],
   activeIcon: RegisteredIcon.home,
   minHeight: '90vh',
+  onIconClick: (e) => {
+    console.log('clicked', e);
+  },
 };
