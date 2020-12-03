@@ -40,6 +40,9 @@ export const StyledSelection = styled.div`
 `;
 
 export const StyledLabel = styled.label<SelectionOptionProps>`
+  & > * {
+    margin: 0 auto;
+  }
   input[type='radio'] + span {
    background: ${({ isActive }: SelectionOptionProps) =>
      isActive ? '#B74237' : background};

@@ -14,6 +14,6 @@ export const StyledAbsenceBody = styled.div`
   width: 70%;
   flex-direction: column;
   & > * {
-    margin: 22px 0;
+    margin: 22px 0 !important;
   }
 `;

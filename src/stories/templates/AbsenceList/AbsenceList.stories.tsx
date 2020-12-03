@@ -56,11 +56,57 @@ const annualLeave = generateAbsence(
 const paidLeave = generateAbsence(
   4,
   15,
-  3,
+  20,
   AbsenceStatus.taken,
   'Special leave paid',
 );
-export const definedAbsences = [sickness, annualLeave, paidLeave];
+const annualLeaveDays = generateAbsence(
+  14,
+  7,
+  16,
+  AbsenceStatus.taken,
+  'Annual leave days',
+);
+const sickness2 = generateAbsence(2, 2, 2, AbsenceStatus.taken, 'Sickness');
+const annualLeaveDays2 = generateAbsence(
+  4,
+  40,
+  3,
+  AbsenceStatus.taken,
+  'Annual Leave Days',
+);
+const annualLeaveDays3 = generateAbsence(
+  0,
+  12,
+  4,
+  AbsenceStatus.taken,
+  'Annual Leave Days',
+);
+const specialPaidLeave = generateAbsence(
+  25,
+  1,
+  8,
+  AbsenceStatus.taken,
+  'Special Paid Leave',
+);
+const annualLeaveDays4 = generateAbsence(
+  1,
+  1,
+  10,
+  AbsenceStatus.taken,
+  'Annual Leave Days',
+);
+export const definedAbsences = [
+  sickness,
+  annualLeave,
+  paidLeave,
+  annualLeaveDays,
+  sickness2,
+  annualLeaveDays2,
+  annualLeaveDays3,
+  specialPaidLeave,
+  annualLeaveDays4,
+];
 Primary.args = {
   absences: [sickness, annualLeave, paidLeave],
 };

@@ -13,7 +13,7 @@ export const StyledFilterBox = styled.div`
   grid-template-rows: auto;
   align-items: center;
   justify-items: flex-start;
-  padding: 10px 20px;
+  padding: 10px 15px;
 `;
 
 export const Status = styled.div`
