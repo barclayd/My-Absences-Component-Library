@@ -13,12 +13,13 @@ export const StyledContainer = styled.div<HeaderProps>`
   min-height: 180px;
   background: ${({ background, theme }: HeaderProps) =>
     background ?? theme.primary.background};
-  grid-template-columns: 2fr 3fr 3fr 1fr;
+  grid-template-columns: 2.5fr 3fr 3fr 0.5fr;
   grid-template-areas: 'user . . logo';
   grid-template-rows: auto;
   align-items: center;
   justify-items: center;
   padding: 37px;
+  box-sizing: border-box;
 `;
 
 export const StyledUser = styled.div`

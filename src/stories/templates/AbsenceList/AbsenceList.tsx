@@ -1,7 +1,10 @@
 import React from 'react';
 import { StyledAbsenceList } from './StyledAbsenceList';
 
-import { Absence, AbsenceRecord } from '../../organism/AbsenceRecord';
+import {
+  Absence,
+  AbsenceRecord,
+} from '../../organism/AbsenceRecord/AbsenceRecord';
 
 export interface AbsenceListProps {
   /**

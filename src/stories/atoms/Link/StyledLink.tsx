@@ -15,4 +15,5 @@ export const StyledLink = styled.a<StyledLinkProps>`
   font-family: ${({ theme }: StyledLinkProps) => theme.font.secondaryFamily};
   text-decoration: underline;
   letter-spacing: -0.26px;
+  cursor: pointer;
 `;

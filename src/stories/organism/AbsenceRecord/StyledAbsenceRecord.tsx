@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { StyledText } from '../atoms/Text/StyledText';
-import { StyledTheme } from '../../models/theme';
+import { StyledText } from '../../atoms/Text/StyledText';
+import { StyledTheme } from '../../../models/theme';
 
 export const StyledContainer = styled.div`
   display: grid;
@@ -16,6 +16,7 @@ export const StyledContainer = styled.div`
   align-items: center;
   justify-items: flex-start;
   padding: 5px 15px;
+  cursor: pointer;
 `;
 
 export const DateCircleContainer = styled.div`
