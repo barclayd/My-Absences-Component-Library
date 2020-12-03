@@ -10,6 +10,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
+    "start:production": "http-server ./public",
     "package": "rm -rf dist && ts-node ./scripts/build.js"
   },
   "files": [
