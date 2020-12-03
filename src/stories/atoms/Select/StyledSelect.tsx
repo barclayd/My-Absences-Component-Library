@@ -6,6 +6,7 @@ export const StyledSelect = styled.select`
   border-radius: 6px;
   color: #767676;
   padding: 10px 20px;
+  min-height: 44px;
 `;
 
 export const DisabledOption = styled.option`

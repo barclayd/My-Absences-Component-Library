@@ -16,9 +16,9 @@ export const FooterContainer = styled.div`
   min-height: 407px;
   background: ${({ background, theme }: FooterProps) =>
     background ?? theme.secondary.background};
-  grid-template-columns: 2fr 2fr 2fr 3fr;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
   grid-template-areas:
-    'location location . email'
+    'location location email email'
     'top-line top-line top-line top-line'
     '. icon icon .'
     'bottom-line bottom-line bottom-line bottom-line'
@@ -51,8 +51,7 @@ export const Location = styled.div`
 export const EmailContainer = styled.div`
   grid-area: email;
   height: 80%;
-  width: 75%;
-  margin-right: ${MARGIN};
+  width: 58%;
 `;
 
 export const EmailSignUp = styled.div`

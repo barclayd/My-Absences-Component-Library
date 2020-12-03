@@ -60,6 +60,7 @@ const paidLeave = generateAbsence(
   AbsenceStatus.taken,
   'Special leave paid',
 );
+export const definedAbsences = [sickness, annualLeave, paidLeave];
 Primary.args = {
   absences: [sickness, annualLeave, paidLeave],
 };

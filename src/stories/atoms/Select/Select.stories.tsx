@@ -1,7 +1,6 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { Select, SelectProps } from './Select';
-import { AbsenceStatus } from '../../organism/AbsenceRecord/AbsenceRecord';
 
 export default {
   title: 'Atoms/Select',
@@ -12,7 +11,7 @@ const Template: Story<SelectProps> = (args) => <Select {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  options: [AbsenceStatus.taken, AbsenceStatus.pending, AbsenceStatus.approved],
+  options: ['Annual leave', 'Sickness', 'Paid leave'],
   placeholder: 'Search absence type',
   onClick: (option) => {
     console.log(option);

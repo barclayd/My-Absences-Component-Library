@@ -42,9 +42,5 @@ export const Selection: React.FC<SelectionProps> = ({
       <span>{option}</span>
     </StyledLabel>
   ));
-  return (
-    <form>
-      <StyledSelection>{selectionOptions}</StyledSelection>
-    </form>
-  );
+  return <StyledSelection>{selectionOptions}</StyledSelection>;
 };

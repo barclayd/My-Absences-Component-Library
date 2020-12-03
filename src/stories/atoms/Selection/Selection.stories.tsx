@@ -11,7 +11,7 @@ const Template: Story<SelectionProps> = (args) => <Selection {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  options: ['All', 'Pending', 'Approved', 'Taken'],
+  options: ['  All  ', 'Pending', 'Approved', ' Taken '],
   onClick: (name) => {
     console.log(name);
   },

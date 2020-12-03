@@ -11,13 +11,12 @@ const background = '#ffffff';
 
 export const StyledSelection = styled.div`
   position: relative;
-  display: inline;
+  max-height: 44px;
   label span {
-    padding: 1em 2em 1em 2em;
+    padding: 10px 25px 10px 25px;
     border: 2px solid #dfdfdf;
     background: ${background};
     position: relative;
-    z-index: 10;
     &:hover {
       background: #ddd;
     }
@@ -41,7 +40,7 @@ export const StyledSelection = styled.div`
 `;
 
 export const StyledLabel = styled.label<SelectionOptionProps>`
-  input[type='radio']:checked + span {
+  input[type='radio'] + span {
    background: ${({ isActive }: SelectionOptionProps) =>
      isActive ? '#B74237' : background};
      font-family: ${({ theme }: SelectionOptionProps) =>
@@ -50,6 +49,7 @@ export const StyledLabel = styled.label<SelectionOptionProps>`
   }
   color: ${({ isActive }: SelectionOptionProps) =>
     isActive ? '#ffffff' : '#767676'};
+  cursor: pointer;
   }
 
 `;

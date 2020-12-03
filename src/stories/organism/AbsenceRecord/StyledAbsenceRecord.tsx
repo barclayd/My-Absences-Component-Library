@@ -16,6 +16,7 @@ export const StyledContainer = styled.div`
   align-items: center;
   justify-items: flex-start;
   padding: 5px 15px;
+  cursor: pointer;
 `;
 
 export const DateCircleContainer = styled.div`
